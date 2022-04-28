@@ -2,14 +2,16 @@ import React from 'react'
 import SearchBar from './components/SearchBar'
 import Home from './components/Home'
 import Searched from './components/Searched'
+import Details from './components/Details'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
-import './style.scss'
+import './css/style.scss'
 import './css/bootstrap.min.css'
 
 
 const RouteApp = () => useRoutes([
     { path: "/", element: <Home /> },
-    { path: "/search/:id", element: <Searched /> }
+    { path: "/search/:id", element: <Searched /> },
+    { path: "/details/:game", element: <Details /> }
 ]);
 
 const App = (): JSX.Element =>

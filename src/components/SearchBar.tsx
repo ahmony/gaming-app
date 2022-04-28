@@ -1,8 +1,7 @@
 import React from 'react'
-import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import { searchGames } from './actions/actions';
 
 
 const SearchBar = (): JSX.Element =>
@@ -10,18 +9,11 @@ const SearchBar = (): JSX.Element =>
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const fetchUser = async (query: string) =>
-    {
-        axios.get(`https://rawg.io/api/games?search=${query}&key=873668b4248e462cb16ef5e138945339`)
-            .then(resp => resp.data.results)
-            .then(user => dispatch({ type: 'GET_DATA', payload: user }))
-    };
-
     const onSearch = async (event: React.FormEvent<HTMLFormElement>) =>
     {
         event.preventDefault();
         const searchValue: string = (event.target as HTMLFormElement).search.value
-        await fetchUser(searchValue);
+        await searchGames(searchValue).then(data => dispatch(data))
         navigate(`/search/${searchValue}`);
         (event.target as HTMLFormElement).search.value = ''
     }

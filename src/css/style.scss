@@ -1,0 +1,200 @@
+.search {
+    &-container {
+        width: 100%;
+        height: 60px;
+        background-color: #323a45;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    &-form {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &-input {
+        margin-left: 10px;
+        padding: 10px;
+        width: 300px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        outline: none;
+        border: none;
+    }
+    &-button{
+        outline: none;
+        border: none;
+        background: #3f51b5;
+        padding: 10px;
+        border-left: 1px solid rgba(0,0,0,0.3);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: #fff;
+        font-weight: 700;
+        transition-duration: 0.3s;
+        cursor:pointer;
+    &:hover {
+        color: #3f51b5;
+        background-color: #fff;
+    }
+    }
+    &-logo {
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.games {
+    
+    margin-top: 100px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.card {
+    max-width: 250px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &-img-myEdit{
+    background-color: black;
+    height: 200px;
+    }
+    &-title {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    &:hover{
+       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.336);
+       transform: translateY(-3px);
+    }
+}
+
+.details-wrapper {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+
+.game {
+    &-banner {
+        height: 420px;
+        overflow: hidden;
+
+    &-img {
+        width: 100%;
+        filter: brightness(35%);
+    }
+    }
+
+    &-content{
+        text-align: center;
+        position: relative;
+        top: -200px;
+    }
+
+    &-header{
+        &-title {
+            font-size: 60px;
+            color: #fff;
+            font-weight: 700;
+            white-space: nowrap;
+            font-family: 'Dosis',
+            sans-serif;
+            mix-blend-mode:difference;
+        }
+        &-release-date{
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Dosis',
+            sans-serif;
+            mix-blend-mode:difference;
+        }
+        &-genres {
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Dosis',
+            sans-serif;
+            mix-blend-mode:difference;
+        }
+    }
+}
+
+.details {
+    background-color: rgb(245, 245, 245);
+    &-marginBottom {
+        margin-bottom: 12px;
+    }
+
+    &-list { 
+        display: flex;
+        list-style: none;
+        margin: 0 auto;
+        position: relative;
+        top:-175px;
+        &-a {
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        
+        &-a:hover {
+            border-bottom: 1px solid rgb(218, 20, 20);
+        }
+    }
+   
+    &-home {
+        position:relative;
+        top:-120px;
+    
+    &-thumbsDown {
+        margin-left: 10px;
+    }
+    }
+}
+
+span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.screenshoots {
+    &-container {
+        position:relative;
+        top:-120px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &-img {
+        height: 200px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.active {
+    border-bottom: 1px solid rgb(89, 159, 206);
+}
+
+.trailers-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: -120px;
+}
+video {
+    margin-right: 10px;
+}
+
+.error {
+    margin-top: 100px;
+    text-align: center;
+}
