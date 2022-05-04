@@ -1,9 +1,9 @@
-import { dataStateInt } from './reducers/dataFetching'
+import { dataStateInt } from './redux/reducers/dataFetching'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
-import { getDetails, getScreenshoots, getTrailers } from './actions/actions'
+import { getDetails, getScreenshoots, getTrailers } from './redux/actions/actions'
 import { useNavigate } from 'react-router-dom';
-import { errorStateInt } from './reducers/errorFetching';
+import { errorStateInt } from './redux/reducers/errorFetching';
 
 const Searched = (): JSX.Element =>
 {

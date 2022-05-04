@@ -1,10 +1,10 @@
-import { dataStateInt } from './reducers/dataFetching'
-import { errorStateInt } from './reducers/errorFetching'
+import { dataStateInt } from './redux/reducers/dataFetching'
+import { errorStateInt } from './redux/reducers/errorFetching'
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getGames, getScreenshoots, getTrailers } from './actions/actions'
+import { getGames, getScreenshoots, getTrailers } from './redux/actions/actions'
 import { useNavigate } from 'react-router-dom';
-import { getDetails } from './actions/actions';
+import { getDetails } from './redux/actions/actions';
 
 
 const Home = (): JSX.Element =>

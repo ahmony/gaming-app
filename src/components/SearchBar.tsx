@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { searchGames } from './actions/actions';
+import { searchGames } from './redux/actions/actions';
 
 
 const SearchBar = (): JSX.Element =>
