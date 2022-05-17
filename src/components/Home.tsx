@@ -20,20 +20,20 @@ const Home = (): JSX.Element =>
     }, [])
 
     return (
+        <div className='body'>
+            <div className='games container'>
+                {error.message === '' ? data.map((game: dataStateInt) =>
+                {
+                    return (<div className="card" onClick={async () => { await getDetails(game.id).then(data => dispatch(data)); await getScreenshoots(game.slug).then(data => dispatch(data)); await getTrailers(game.id).then(data => dispatch(data)); navigate(`/details/${game.name}`) }} key={game.id}>
+                        <img src={`${game.background_image}`} alt="" className="card-img-top card-img-myEdit" />
+                        <div className="card-body">
+                            <h4 className="card-title">{game.name}</h4>
+                        </div>
+                    </div>)
+                }) : <h2>{error.message}</h2>}
 
-        <div className='games container'>
-            {error.message === '' ? data.map((game: dataStateInt) =>
-            {
-                return (<div className="card" onClick={async () => { await getDetails(game.id).then(data => dispatch(data)); await getScreenshoots(game.slug).then(data => dispatch(data)); await getTrailers(game.id).then(data => dispatch(data)); navigate(`/details/${game.name}`) }} key={game.id}>
-                    <img src={`${game.background_image}`} alt="" className="card-img-top card-img-myEdit" />
-                    <div className="card-body">
-                        <h4 className="card-title">{game.name}</h4>
-                    </div>
-                </div>)
-            }) : <h2>{error.message}</h2>}
-
+            </div>
         </div>
-
     )
 }
 

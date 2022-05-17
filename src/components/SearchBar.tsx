@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { searchGames } from './redux/actions/actions';
-
+import DarkMode from './DarkMode';
 
 const SearchBar = (): JSX.Element =>
 {
@@ -19,12 +19,13 @@ const SearchBar = (): JSX.Element =>
     }
 
     return (
-        <div className="search-container">
+        <div className="search-container ">
             <form className="search-form" onSubmit={onSearch}>
                 <span className='search-logo' onClick={() => navigate('/')}>GMNG</span>
                 <input className='search-input' name='search' placeholder='Search over 50,000 games' type="text" />
                 <button className='search-button'>Search</button>
             </form>
+            <DarkMode></DarkMode>
         </div>
     )
 }
